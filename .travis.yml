@@ -8,7 +8,7 @@ install:
 
 script: true
 
-before deploy:
+before_deploy:
   - mkdocs build --verbose --clean --strict
 
 deploy:
