@@ -1,20 +1,21 @@
-language: python
+language: python # Set the build language to Python
 
-python: 3.6
+python: 3.6 # Set the version of Python to use
 
-branches: master
+branches: master # Set the branch to build from
+
 install:
-  - pip install mkdocs
+    - pip install mkdocs # Install the required dependencies
 
-script: true
+script: true # Skip script (Don't use this if one already exists)
 
 before_deploy:
-  - mkdocs build --verbose --clean --strict
+    - mkdocs build --verbose --clean --strict # Build a local version of the docs
 
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  local_dir: site
-  on:
-    branch: master
+deploy: # Deploy documentation to Github in the gh_pages branch
+    provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    local_dir: site
+    on:
+        branch: master
