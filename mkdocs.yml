@@ -1,0 +1,13 @@
+site_name: HuCon
+site_description: 'HuCon documentation about the full featured robot'
+copyright: 'Basler AG 2019'
+
+nav:
+    - Home: index.md
+    - About: about.md
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - tables
